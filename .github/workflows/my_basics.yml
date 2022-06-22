@@ -10,15 +10,13 @@ jobs:
   my_testing:
      runs_on: ubuntu-latest
     
-     steps:
-     - name: Hello world
-       run : echo "Hello world from Testing job" 
+       steps:
+       - name: Hello world
+         run : echo "Hello world from Testing job" 
    
-   
-   my_deploy:
-     runs_on: ubuntu-latest
+  my_deploy:
+    runs_on: ubuntu-latest
      
-     steps:
-     - name: Print Hello message
-       run : echo "Hello world from Testing job" 
-  
+      steps:
+      - name: Print Hello message
+        run : echo "Hello world from Testing job" 
