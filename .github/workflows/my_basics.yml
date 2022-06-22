@@ -5,8 +5,7 @@ on:
     branches:
       - main 
 
-  jobs:
-  builds:
+jobs:
 
   my_testing:
     runs_on: ubuntu-latest
