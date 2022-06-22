@@ -23,7 +23,7 @@ jobs:
             echo "Application name: ${{ env.APPLICATION_NAME }}"
             
         - name: "Git clone"
-          run : git-tag/checkout@v1
+          run : actions/checkout@v3
         
         - name: List folder content
           run : ls -la
