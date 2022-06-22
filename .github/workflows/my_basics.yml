@@ -24,8 +24,6 @@ jobs:
             
         - name: "Git clone"
           uses : actions/checkout@v3
-            with:
-            repository: jnxwl-git/git-tag
         
         - name: List folder content
           run : ls -la
