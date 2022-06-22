@@ -31,12 +31,25 @@ jobs:
   my_deploy:
     runs-on: ubuntu-latest
     needs: [my_testing]
+    env:
+      VAR1 : "Variable_1"
+      VAR2 : "Variable_2"
+    
     steps:
        - name: Print Hello message
+         run : |
+            echo "var1 = ${{ env.VAR1 }}"
+            echo "var2 = ${{ env.VAR2 }}"
+            echo "var3 = $local_var"
+         env:
+           local_var: "This is local var"
+     
+       - name: Print Hello message
          run : echo "Hello world from Deploy job" 
-        
+         
+       
        - name: Printing Deployment message
          run : echo "Deploy Package name is ${{ env.DEPLOY_PACKAGE_NAME }}"
  
        - name: zip
-         run : zip
+         run : zip --version
