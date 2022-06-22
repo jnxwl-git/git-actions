@@ -23,7 +23,9 @@ jobs:
             echo "Application name: ${{ env.APPLICATION_NAME }}"
             
         - name: "Git clone"
-          uses : actions/checkout@v1
+          uses : actions/checkout@v3
+            with:
+            repository: jnxwl-git/git-tag
         
         - name: List folder content
           run : ls -la
